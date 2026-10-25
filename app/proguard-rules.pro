@@ -1,0 +1,2 @@
+-dontwarn androidx.security.**
+-keep class id.driverkit.overlay.** { *; }
