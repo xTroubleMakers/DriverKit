@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DriverKit</string>
+
+    <string name="main_subtitle">Overlay produktivitas driver · data lokal · tanpa internet</string>
+    <string name="perm_overlay">1. Izinkan tampil di atas aplikasi lain</string>
+    <string name="perm_notif">2. Izinkan akses notifikasi</string>
+    <string name="start_overlay">Mulai overlay</string>
+    <string name="stop_overlay">Stop overlay</string>
+    <string name="stats">Statistik</string>
+    <string name="settings">Pengaturan</string>
+
+    <string name="panel_title">DriverKit</string>
+    <string name="sec_today">HARI INI</string>
+    <string name="sec_income">PENGHASILAN</string>
+    <string name="sec_break">ISTIRAHAT &amp; WAKTU</string>
+    <string name="sec_optin">OPT-IN (IZIN)</string>
+    <string name="sec_display">TAMPILAN</string>
+
+    <string name="row_auto_catch">Pencatat otomatis</string>
+    <string name="row_target">Target harian</string>
+    <string name="row_per_app">Pisah per aplikasi</string>
+    <string name="row_auto_break">Auto-jurnal istirahat</string>
+    <string name="row_drink">Pengingat minum</string>
+    <string name="row_idle">Peringatan idle</string>
+    <string name="row_speed">Speedometer</string>
+    <string name="row_sos">Tombol SOS</string>
+    <string name="row_mini">Mode mini</string>
+    <string name="row_autohide">Auto-hide saat idle</string>
+    <string name="row_opacity">Opasitas panel</string>
+    <string name="note_need_location">butuh izin lokasi</string>
+    <string name="note_need_loc_sms">butuh lokasi &amp; SMS</string>
+    <string name="act_reset_shift">Reset shift</string>
+    <string name="act_sos">SOS</string>
+
+    <string name="set_theme">Tema</string>
+    <string name="set_theme_system">Sistem</string>
+    <string name="set_theme_light">Terang</string>
+    <string name="set_theme_dark">Gelap</string>
+    <string name="set_target">Target harian</string>
+    <string name="set_fuel">Bensin/hari</string>
+    <string name="set_toll">Tol/hari</string>
+    <string name="set_parking">Parkir/hari</string>
+    <string name="set_split">Setoran ke pemilik (%)</string>
+    <string name="set_drink">Pengingat minum</string>
+    <string name="set_drink_interval">Interval (menit)</string>
+    <string name="set_summary">Ringkasan harian 21:00</string>
+    <string name="set_idle">Peringatan idle (menit)</string>
+    <string name="set_pin">PIN aplikasi</string>
+    <string name="set_pin_action">Atur PIN</string>
+    <string name="set_wipe">Hapus semua data</string>
+    <string name="set_speed">Speedometer</string>
+    <string name="set_sos">Tombol SOS</string>
+    <string name="set_sos_number">Nomor darurat</string>
+    <string name="set_sos_set">Atur</string>
+    <string name="set_export">Export CSV</string>
+    <string name="set_share">Bagikan ringkasan</string>
+    <string name="set_share_note">via share sheet · tanpa INTERNET</string>
+
+    <string name="stats_title">Statistik</string>
+    <string name="stats_period">Penghasilan 14 hari</string>
+    <string name="stats_per_app">Rincian per aplikasi</string>
+    <string name="stats_export">Export CSV</string>
+    <string name="stats_share">Bagikan via…</string>
+
+    <string name="notif_running">Panel produktivitas sedang berjalan</string>
+    <string name="notif_drink">Waktunya minum &amp; peregangan</string>
+    <string name="notif_drink_body">Jangan lupa istirahat sejenak.</string>
+    <string name="notif_summary">Ringkasan hari ini</string>
+
+    <string name="toast_shift_reset">Timer shift direset</string>
+    <string name="toast_break">Istirahat 20 menit</string>
+    <string name="toast_break_time">Sudah lama bekerja — waktu istirahat</string>
+    <string name="toast_no_location">Izin lokasi belum diberikan — speedometer off</string>
+    <string name="toast_saved">Tersimpan: %1$s</string>
+    <string name="toast_pin_updated">PIN diperbarui</string>
+    <string name="toast_wiped">Data dihapus</string>
+    <string name="dlg_nominal">Masukkan nominal</string>
+    <string name="dlg_number">Masukkan angka</string>
+    <string name="dlg_save">Simpan</string>
+    <string name="dlg_cancel">Batal</string>
+    <string name="field_unset">Belum diatur</string>
+    <string name="widget_net">Bersih %1$s</string>
+    <string name="widget_trips">%1$d trip</string>
+</resources>
