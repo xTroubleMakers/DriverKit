@@ -23,6 +23,9 @@ class MainActivity : AppCompatActivity() {
         Settings.load()
         Settings.applyTheme()
         super.onCreate(savedInstanceState)
+        Settings.init(this)
+        Settings.load()
+        Settings.applyTheme()
         setContentView(R.layout.activity_main)
 
         findViewById<Button>(R.id.btnOverlayPerm).setOnClickListener { askOverlay() }
