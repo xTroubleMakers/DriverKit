@@ -1,0 +1,9 @@
+<resources>
+    <color name="indigo">#4F46E5</color>
+    <color name="indigo_soft">#C7D2FE</color>
+    <color name="dark_text">#0F172A</color>
+    <color name="muted">#64748B</color>
+    <color name="card">#FFFFFF</color>
+    <color name="border">#E2E8F0</color>
+    <color name="danger">#B91C1C</color>
+</resources>
