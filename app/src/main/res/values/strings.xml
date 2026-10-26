@@ -12,12 +12,12 @@
     <string name="perm_notif_desc">Opsional — catat penghasilan otomatis</string>
     <string name="state_check">Cek</string>
     <string name="state_ready">Aktif</string>
-    <string name="state_off">Belum</string>
-    <string name="stats_desc">Penghasilan 14 hari &amp; export</string>
+    <string name="state_off">Belum aktif</string>
+    <string name="stats_desc">Penghasilan 14 hari &amp; ekspor</string>
     <string name="settings_desc">Target, tema, SOS, PIN</string>
     <string name="main_footer">Data tersimpan di perangkat · tanpa internet</string>
     <string name="start_overlay">Mulai overlay</string>
-    <string name="stop_overlay">Stop overlay</string>
+    <string name="stop_overlay">Hentikan overlay</string>
     <string name="stats">Statistik</string>
     <string name="settings">Pengaturan</string>
 
@@ -37,7 +37,7 @@
     <string name="row_speed">Speedometer</string>
     <string name="row_sos">Tombol SOS</string>
     <string name="row_mini">Mode mini</string>
-    <string name="row_autohide">Auto-hide saat idle</string>
+    <string name="row_autohide">Sembunyikan otomatis saat idle</string>
     <string name="row_opacity">Opasitas panel</string>
     <string name="note_need_location">butuh izin lokasi</string>
     <string name="note_need_loc_sms">butuh lokasi</string>
@@ -64,25 +64,25 @@
     <string name="set_sos">Tombol SOS</string>
     <string name="set_sos_number">Nomor darurat</string>
     <string name="set_sos_set">Atur</string>
-    <string name="set_export">Export CSV</string>
+    <string name="set_export">Ekspor CSV</string>
     <string name="set_share">Bagikan ringkasan</string>
-    <string name="set_share_note">via share sheet · tanpa INTERNET</string>
+    <string name="set_share_note">melalui share sheet · tanpa INTERNET</string>
 
     <string name="stats_title">Statistik</string>
     <string name="stats_period">Penghasilan 14 hari</string>
     <string name="stats_per_app">Rincian per aplikasi</string>
-    <string name="stats_export">Export CSV</string>
-    <string name="stats_share">Bagikan via…</string>
+    <string name="stats_export">Ekspor CSV</string>
+    <string name="stats_share">Bagikan melalui…</string>
 
     <string name="notif_running">Panel produktivitas sedang berjalan</string>
-    <string name="notif_drink">Waktunya minum &amp; peregangan</string>
-    <string name="notif_drink_body">Jangan lupa istirahat sejenak.</string>
+    <string name="notif_drink">Waktunya minum dan peregangan</string>
+    <string name="notif_drink_body">Jangan lupa beristirahat sejenak.</string>
     <string name="notif_summary">Ringkasan hari ini</string>
 
     <string name="toast_shift_reset">Timer shift direset</string>
     <string name="toast_break">Istirahat 20 menit</string>
-    <string name="toast_break_time">Sudah lama bekerja — waktu istirahat</string>
-    <string name="toast_no_location">Izin lokasi belum diberikan — speedometer off</string>
+    <string name="toast_break_time">Sudah lama bekerja — waktunya beristirahat</string>
+    <string name="toast_no_location">Izin lokasi belum diberikan — speedometer nonaktif</string>
     <string name="toast_saved">Tersimpan: %1$s</string>
     <string name="toast_pin_updated">PIN diperbarui</string>
     <string name="toast_wiped">Data dihapus</string>
@@ -93,4 +93,11 @@
     <string name="field_unset">Belum diatur</string>
     <string name="widget_net">Bersih %1$s</string>
     <string name="widget_trips">%1$d trip</string>
+
+    <string name="toast_overlay_permission_active">Izin overlay sudah aktif</string>
+    <string name="open_overlay_settings">Buka Pengaturan &gt; Aplikasi &gt; Akses khusus</string>
+    <string name="open_notif_settings">Buka Pengaturan &gt; Notifikasi &gt; Akses notifikasi</string>
+    <string name="enable_overlay_first">Aktifkan izin “tampil di atas aplikasi lain” terlebih dahulu</string>
+    <string name="toast_overlay_started">Overlay dimulai</string>
+    <string name="toast_overlay_stopped">Overlay dihentikan</string>
 </resources>
