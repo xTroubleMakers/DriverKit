@@ -7,7 +7,9 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings as AndroidSettings
+import android.provider.Settings.Secure
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -19,9 +21,6 @@ class MainActivity : AppCompatActivity() {
     private val reqNotif = 2001
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        Settings.init(this)
-        Settings.load()
-        Settings.applyTheme()
         super.onCreate(savedInstanceState)
         Settings.init(this)
         Settings.load()
@@ -39,8 +38,36 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, SettingsActivity::class.java))
         }
 
+        refreshPermissionState()
         askNotificationPermissionIfNeeded()
     }
+
+    override fun onResume() {
+        super.onResume()
+        if (::permissionStateReady.isInitialized) refreshPermissionState()
+    }
+
+    private lateinit var permissionStateReady: Unit
+
+    private fun refreshPermissionState() {
+        val overlayOn = AndroidSettings.canDrawOverlays(this)
+        findViewById<TextView>(R.id.txtOverlayState).apply {
+            text = getString(if (overlayOn) R.string.state_ready else R.string.state_off)
+            setTextColor(ContextCompat.getColor(this@MainActivity, if (overlayOn) R.color.indigo else R.color.muted))
+        }
+
+        val notifOn = Secure.getString(contentResolver, "enabled_notification_listeners")
+            ?.split(":")
+            ?.any { it.equals(componentNameString(), ignoreCase = true) } == true
+        findViewById<TextView>(R.id.txtNotifState).apply {
+            text = getString(if (notifOn) R.string.state_ready else R.string.state_off)
+            setTextColor(ContextCompat.getColor(this@MainActivity, if (notifOn) R.color.indigo else R.color.muted))
+        }
+        permissionStateReady = Unit
+    }
+
+    private fun componentNameString(): String =
+        "${packageName}/${packageName}.NotificationListenerService"
 
     private fun askOverlay() {
         if (AndroidSettings.canDrawOverlays(this)) {
