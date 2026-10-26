@@ -3,8 +3,19 @@
     <string name="app_name">DriverKit</string>
 
     <string name="main_subtitle">Overlay produktivitas driver · data lokal · tanpa internet</string>
-    <string name="perm_overlay">1. Izinkan tampil di atas aplikasi lain</string>
-    <string name="perm_notif">2. Izinkan akses notifikasi</string>
+    <string name="step_permissions">LANGKAH 1 · IZIN</string>
+    <string name="step_control">LANGKAH 2 · KONTROL</string>
+    <string name="step_more">LAINNYA</string>
+    <string name="perm_overlay">Tampil di atas aplikasi lain</string>
+    <string name="perm_notif">Akses notifikasi</string>
+    <string name="perm_overlay_desc">Wajib — panel di atas aplikasi lain</string>
+    <string name="perm_notif_desc">Opsional — catat penghasilan otomatis</string>
+    <string name="state_check">Cek</string>
+    <string name="state_ready">Aktif</string>
+    <string name="state_off">Belum</string>
+    <string name="stats_desc">Penghasilan 14 hari &amp; export</string>
+    <string name="settings_desc">Target, tema, SOS, PIN</string>
+    <string name="main_footer">Data tersimpan di perangkat · tanpa internet</string>
     <string name="start_overlay">Mulai overlay</string>
     <string name="stop_overlay">Stop overlay</string>
     <string name="stats">Statistik</string>
@@ -29,7 +40,7 @@
     <string name="row_autohide">Auto-hide saat idle</string>
     <string name="row_opacity">Opasitas panel</string>
     <string name="note_need_location">butuh izin lokasi</string>
-    <string name="note_need_loc_sms">butuh lokasi &amp; SMS</string>
+    <string name="note_need_loc_sms">butuh lokasi</string>
     <string name="act_reset_shift">Reset shift</string>
     <string name="act_sos">SOS</string>
 
