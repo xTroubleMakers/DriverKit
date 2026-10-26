@@ -8,6 +8,7 @@ import android.os.Build
 import android.os.Bundle
 import android.provider.Settings as AndroidSettings
 import android.provider.Settings.Secure
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -19,6 +20,7 @@ import androidx.core.content.ContextCompat
 class MainActivity : AppCompatActivity() {
 
     private val reqNotif = 2001
+    private var permissionStateReady = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,14 +29,14 @@ class MainActivity : AppCompatActivity() {
         Settings.applyTheme()
         setContentView(R.layout.activity_main)
 
-        findViewById<Button>(R.id.btnOverlayPerm).setOnClickListener { askOverlay() }
-        findViewById<Button>(R.id.btnNotifPerm).setOnClickListener { askNotifAccess() }
+        findViewById<View>(R.id.btnOverlayPerm).setOnClickListener { askOverlay() }
+        findViewById<View>(R.id.btnNotifPerm).setOnClickListener { askNotifAccess() }
         findViewById<Button>(R.id.btnStart).setOnClickListener { startOverlay() }
         findViewById<Button>(R.id.btnStop).setOnClickListener { stopOverlay() }
-        findViewById<Button>(R.id.btnStats).setOnClickListener {
+        findViewById<View>(R.id.btnStats).setOnClickListener {
             startActivity(Intent(this, StatsActivity::class.java))
         }
-        findViewById<Button>(R.id.btnSettings).setOnClickListener {
+        findViewById<View>(R.id.btnSettings).setOnClickListener {
             startActivity(Intent(this, SettingsActivity::class.java))
         }
 
@@ -44,10 +46,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        if (::permissionStateReady.isInitialized) refreshPermissionState()
+        if (permissionStateReady) refreshPermissionState()
     }
-
-    private lateinit var permissionStateReady: Unit
 
     private fun refreshPermissionState() {
         val overlayOn = AndroidSettings.canDrawOverlays(this)
@@ -63,11 +63,11 @@ class MainActivity : AppCompatActivity() {
             text = getString(if (notifOn) R.string.state_ready else R.string.state_off)
             setTextColor(ContextCompat.getColor(this@MainActivity, if (notifOn) R.color.indigo else R.color.muted))
         }
-        permissionStateReady = Unit
+        permissionStateReady = true
     }
 
     private fun componentNameString(): String =
-        "${packageName}/${packageName}.NotificationListenerService"
+        "$packageName/${packageName}.NotificationListenerService"
 
     private fun askOverlay() {
         if (AndroidSettings.canDrawOverlays(this)) {
