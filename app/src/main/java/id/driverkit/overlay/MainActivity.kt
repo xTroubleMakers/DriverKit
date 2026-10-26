@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun askOverlay() {
         if (AndroidSettings.canDrawOverlays(this)) {
-            toast("Izin overlay sudah aktif")
+            toast(getString(R.string.toast_overlay_permission_active))
             return
         }
         val i = Intent(
@@ -79,13 +79,13 @@ class MainActivity : AppCompatActivity() {
             Uri.parse("package:$packageName")
         )
         runCatching { startActivity(i) }
-            .onFailure { toast("Buka Pengaturan > Aplikasi > Akses khusus") }
+            .onFailure { toast(getString(R.string.open_overlay_settings)) }
     }
 
     private fun askNotifAccess() {
         val i = Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS")
         runCatching { startActivity(i) }
-            .onFailure { toast("Buka Pengaturan > Notifikasi > Akses notifikasi") }
+            .onFailure { toast(getString(R.string.open_notif_settings)) }
     }
 
     private fun askNotificationPermissionIfNeeded() {
@@ -102,7 +102,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun startOverlay() {
         if (!AndroidSettings.canDrawOverlays(this)) {
-            toast("Aktifkan izin 'tampil di atas aplikasi lain' dulu")
+            toast(getString(R.string.enable_overlay_first))
             askOverlay()
             return
         }
@@ -112,12 +112,12 @@ class MainActivity : AppCompatActivity() {
         val i = Intent(this, OverlayService::class.java)
         runCatching { startForegroundService(i) }
             .onFailure { startService(i) }
-        toast("Overlay dimulai")
+        toast(getString(R.string.toast_overlay_started))
     }
 
     private fun stopOverlay() {
         stopService(Intent(this, OverlayService::class.java))
-        toast("Overlay dihentikan")
+        toast(getString(R.string.toast_overlay_stopped))
     }
 
     private fun toast(msg: String) =
